@@ -35,7 +35,7 @@
      - `免费` `中国`
    ```
 
-3. 标签从 README 的“标签说明”中选择：费用标签（`免费`、`免费增值`、`付费`）选一个，市场标签（`中国`、`香港`、`美国`、`全球`、`加密货币`）按实际覆盖范围选择；公开数据源和商业数据源如果提供程序化访问接口，加上 `API`。英文版使用对应的英文标签。
+3. 标签从 README 的“标签说明”中选择：费用标签（`免费`、`免费增值`、`付费`）选一个，市场标签（`中国`、`香港`、`美国`、`印度`、`全球`、`加密货币`）按实际覆盖范围选择；公开数据源和商业数据源如果提供程序化访问接口，加上 `API`。英文版使用对应的英文标签。
 4. 条目已停止维护或被其他产品取代时，移到“已停止维护”一节并说明原因。
 
 ---
@@ -75,5 +75,5 @@ If you open a PR directly:
      - `Free` `Global`
    ```
 
-3. Pick tags from the "Tags" table in the README: one pricing tag (`Free`, `Freemium`, `Paid`) and the market tags that match the coverage (`China`, `Hong Kong`, `US`, `Global`, `Crypto`). Add `API` to public and commercial data sources that offer programmatic access. Use the corresponding Chinese tags in `README.md`.
+3. Pick tags from the "Tags" table in the README: one pricing tag (`Free`, `Freemium`, `Paid`) and the market tags that match the coverage (`China`, `Hong Kong`, `US`, `India`, `Global`, `Crypto`). Add `API` to public and commercial data sources that offer programmatic access. Use the corresponding Chinese tags in `README.md`.
 4. When an entry is no longer maintained or has been replaced, move it to the "Discontinued" section and explain why.

@@ -18,6 +18,7 @@ TAGS = {
     "中国": "China",
     "香港": "Hong Kong",
     "美国": "US",
+    "印度": "India",
     "全球": "Global",
     "加密货币": "Crypto",
 }

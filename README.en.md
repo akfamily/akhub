@@ -27,7 +27,7 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 | `Freemium` | Free tier available; more data or higher limits require payment |
 | `Paid` | Requires purchase; a trial may be available |
 | `API` | Offers programmatic access; not tagged for open data tools and SDKs, which are APIs by nature |
-| `China` `Hong Kong` `US` `Global` `Crypto` | Main market or data coverage |
+| `China` `Hong Kong` `US` `India` `Global` `Crypto` | Main market or data coverage |
 
 ## Open Data Tools
 
@@ -204,6 +204,10 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 - [RiceQuant DataHub](https://www.ricequant.com/welcome/datahub)
   - Market and factor data for stocks, futures, options and more.
   - `Paid` `China`
+
+- [Tapetide](https://tapetide.com/mcp)
+  - Indian stock market (NSE, BSE) data via an MCP server: financial statements, a ratio screener, technical indicators, FII/DII flows, index option chains (end-of-day snapshots), shareholding and filings.
+  - `Freemium` `API` `India`
 
 ## Quant Research Frameworks
 

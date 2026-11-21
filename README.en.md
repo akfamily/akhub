@@ -166,6 +166,9 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 - [Crypto Fear & Greed Index (alternative.me)](https://alternative.me/crypto/fear-and-greed-index/)
   - A daily index of cryptocurrency market sentiment, with a free API and historical data; attribution is required.
   - `Free` `API` `Crypto`
+- [Wall Street Research Entities (UnHideA)](https://github.com/lijiumixin/wall-street-research-entities)
+  - Open MIT-licensed 11-language canonical entity and broker alias dictionary covering 405 global public companies and 73 sell-side institutions (JSON/CSV), linked to live multilingual research hubs on [UnHideA](https://unhidea.com/en/).
+  - `Free` `Global`
 
 ## Commercial Data Sources
 

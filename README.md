@@ -166,6 +166,9 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
 - [加密货币恐惧与贪婪指数（alternative.me）](https://alternative.me/crypto/fear-and-greed-index/)
   - 衡量加密货币市场情绪的每日指数，提供免费 API 和历史数据，使用时需注明数据来源。
   - `免费` `API` `加密货币`
+- [UnHideA 全球投研实体数据集](https://github.com/lijiumixin/wall-street-research-entities)
+  - 开源 MIT 协议的 11 语言华尔街研报实体与投行别名映射字典（覆盖 405 家全球上市公司与 73 家研究机构，含 JSON/CSV 数据与公开多语种研报索引 [UnHideA](https://unhidea.com/en/)）。
+  - `免费` `全球`
 
 ## 商业数据源
 

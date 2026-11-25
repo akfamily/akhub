@@ -303,6 +303,10 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - Python wrapper for the TA-Lib technical analysis library, with 150+ indicators and candlestick pattern recognition.
   - `Free` `Global`
 
+- [AlphaSift](https://github.com/ZhuLinsen/alphasift)
+  - Open-source multi-market quantitative stock screener CLI and read-only 14-tool MCP server built on AKShare and Yahoo Finance, with no-lookahead walk-forward pattern replay and live T+N tracking.
+  - `Free` `China` `Hong Kong` `US` `Global`
+
 ## Quant Platforms
 
 - [聚宽 (JoinQuant)](https://www.joinquant.com/)

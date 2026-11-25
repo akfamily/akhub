@@ -303,6 +303,10 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 技术分析指标库 TA-Lib 的 Python 封装，提供 150 多种技术指标和 K 线形态识别。
   - `免费` `全球`
 
+- [AlphaSift](https://github.com/ZhuLinsen/alphasift)
+  - 开源多市场量化选股命令行与 14 工具只读 MCP 服务器，基于 AKShare 与雅虎财经等公开数据源，提供无前瞻 Walk-Forward K 线形态回放与公开 T+N 验证看板。
+  - `免费` `中国` `香港` `美国` `全球`
+
 ## 量化平台
 
 - [聚宽（JoinQuant）](https://www.joinquant.com/)

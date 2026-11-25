@@ -3,7 +3,8 @@
 README.md becomes index.html and README.en.md becomes en/index.html, so the
 README files stay the only source of content. Entries written in the standard
 three-line format become cards that can be searched and filtered by tag; any
-other Markdown in a section is rendered as it is. Run locally with:
+other Markdown in a section is rendered as it is. The build also writes
+sitemap.xml and robots.txt. Run locally with:
 
     pip install -r .github/scripts/requirements-site.txt
     python .github/scripts/build_site.py
@@ -288,6 +289,9 @@ TEMPLATE = """<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
   <title>{title} — AKFamily</title>
   <meta name="description" content="{description}">
   <link rel="canonical" href="{url}">
@@ -343,13 +347,16 @@ TEMPLATE = """<!doctype html>
 
 CSS = """
 :root{--brand:#433dff;--brand-soft:#eef1ff;--text:#1f2328;--muted:#59636e;--line:#e3e6ea;
---bg-alt:#f6f7fb;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+--bg:#fff;--bg-alt:#f6f7fb;--surface:#fff;--raised:#fff;--nav-bg:rgba(255,255,255,.94);
+--on-brand:#fff;--ring:rgba(67,61,255,.14);--card-hover:#c5c9f7;
+--card-shadow:rgba(67,61,255,.07);--pre:#f3f4f6;--shadow:rgba(0,0,0,.08);color-scheme:light;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
 "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;color:var(--text);line-height:1.75}
-*{box-sizing:border-box}html{scroll-padding-top:76px}body{margin:0}
+*{box-sizing:border-box}html{scroll-padding-top:76px}body{margin:0;background:var(--bg)}
 [hidden]{display:none!important}
 a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}.ak{color:var(--brand)}
-.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);
+.nav{position:sticky;top:0;z-index:10;background:var(--nav-bg);
 backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;gap:20px;min-height:60px}
 .brand{font-size:22px;font-weight:700;color:var(--text)}.brand:hover{text-decoration:none}
@@ -358,8 +365,8 @@ backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .search{display:none;flex:1;max-width:440px;margin:0 auto}.js .search{display:block}
 .search input{width:100%;height:38px;padding:0 16px;font:inherit;font-size:15px;color:var(--text);
 background:var(--bg-alt);border:1px solid var(--line);border-radius:999px;outline:none}
-.search input:focus{background:#fff;border-color:var(--brand);
-box-shadow:0 0 0 3px rgba(67,61,255,.14)}
+.search input:focus{background:var(--raised);border-color:var(--brand);
+box-shadow:0 0 0 3px var(--ring)}
 .layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:40px;align-items:start}
 .side{position:sticky;top:61px;max-height:calc(100vh - 61px);overflow-y:auto;padding:28px 0}
 .side nav{display:flex;flex-direction:column;gap:2px}
@@ -396,19 +403,19 @@ border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
 cursor:pointer}#clear:hover{text-decoration:underline}
 .chip,.tag{font:inherit;line-height:1.5;border-radius:999px;border:1px solid transparent;cursor:default}
 .js .chip,.js .tag{cursor:pointer}
-.chip{font-size:13.5px;padding:2px 13px;background:#fff;border-color:var(--line);color:var(--text)}
+.chip{font-size:13.5px;padding:2px 13px;background:var(--raised);border-color:var(--line);color:var(--text)}
 .js .chip:hover{border-color:var(--brand)}
 .tag{font-size:12.5px;padding:0 10px;background:var(--brand-soft);color:var(--brand)}
 .js .tag:hover{border-color:var(--brand)}
-.chip[aria-pressed="true"],.tag.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.chip[aria-pressed="true"],.tag.on{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
 .chip:focus-visible,.tag:focus-visible,.totop:focus-visible{outline:2px solid var(--brand);
 outline-offset:2px}
 .empty{margin:28px 0;padding:28px 18px;text-align:center;color:var(--muted);
 border:1px dashed var(--line);border-radius:12px}
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.card{display:flex;flex-direction:column;min-width:0;padding:14px 16px 12px;background:#fff;
+.card{display:flex;flex-direction:column;min-width:0;padding:14px 16px 12px;background:var(--surface);
 border:1px solid var(--line);border-radius:12px;transition:border-color .15s,box-shadow .15s}
-.card:hover{border-color:#c5c9f7;box-shadow:0 2px 12px rgba(67,61,255,.07)}
+.card:hover{border-color:var(--card-hover);box-shadow:0 2px 12px var(--card-shadow)}
 .card h3{margin:0 0 4px;font-size:16.5px;line-height:1.45;overflow-wrap:anywhere}
 .card .desc{flex:1;color:var(--muted);font-size:14.5px;line-height:1.65;overflow-wrap:anywhere}
 .card .desc p{margin:0}
@@ -420,12 +427,12 @@ code{font-family:Consolas,"SFMono-Regular",Menlo,monospace;font-size:13px;
 background:var(--brand-soft);color:var(--brand);padding:1px 8px;border-radius:999px;margin-right:4px;
 white-space:nowrap}
 pre code{background:none;color:inherit;padding:0}
-pre{background:#f3f4f6;padding:12px 16px;border-radius:8px;overflow-x:auto}
+pre{background:var(--pre);padding:12px 16px;border-radius:8px;overflow-x:auto}
 .footer{padding:28px 0;text-align:center;font-size:14px;color:var(--muted);
 border-top:1px solid var(--line)}.footer p{margin:4px 0}.footer a{color:var(--muted)}
 .totop{position:fixed;right:24px;bottom:24px;z-index:9;display:flex;align-items:center;
-justify-content:center;width:42px;height:42px;font-size:18px;color:var(--text);background:#fff;
-border:1px solid var(--line);border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+justify-content:center;width:42px;height:42px;font-size:18px;color:var(--text);background:var(--raised);
+border:1px solid var(--line);border-radius:50%;box-shadow:0 2px 10px var(--shadow)}
 .totop:hover{color:var(--brand);border-color:var(--brand);text-decoration:none}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 @media (max-width:960px){html{scroll-padding-top:120px}
@@ -441,6 +448,10 @@ border:1px solid var(--line);border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,
 .hero h1{font-size:28px}.nav nav a{font-size:14px}.nav .home{display:none}
 .content h2{font-size:21px;margin-top:36px}.filters{padding:12px 14px}
 .totop{right:16px;bottom:16px}}
+@media (prefers-color-scheme:dark){:root{--brand:#a09dff;--brand-soft:#262a52;--text:#e6e9ef;
+--muted:#9aa4b2;--line:#2b313c;--bg:#0e1116;--bg-alt:#161a22;--surface:#161a22;--raised:#222834;
+--nav-bg:rgba(14,17,22,.92);--on-brand:#11131a;--ring:rgba(160,157,255,.28);--card-hover:#4b5091;
+--card-shadow:rgba(0,0,0,.45);--pre:#161a22;--shadow:rgba(0,0,0,.5);color-scheme:dark}}
 """
 
 JS = """
@@ -529,6 +540,29 @@ def first_paragraph(text):
     return ""
 
 
+def write_sitemap():
+    """Write sitemap.xml and robots.txt, so search engines find both languages."""
+    today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+    alternates = "".join(
+        f'    <xhtml:link rel="alternate" hreflang="{page["lang"]}" href="{page["url"]}"/>\n'
+        for page in PAGES
+    )
+    urls = "".join(
+        f'  <url>\n    <loc>{page["url"]}</loc>\n    <lastmod>{today}</lastmod>\n{alternates}  </url>\n'
+        for page in PAGES
+    )
+    (OUT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        f'{urls}</urlset>\n',
+        encoding="utf-8",
+    )
+    (OUT / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n", encoding="utf-8"
+    )
+
+
 def main():
     year = datetime.date.today().year
     for page in PAGES:
@@ -566,6 +600,8 @@ def main():
         )
         print(f"built {out.relative_to(ROOT)}")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    write_sitemap()
+    print("built sitemap.xml and robots.txt")
     return 0
 
 

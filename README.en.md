@@ -209,6 +209,10 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - Indian stock market (NSE, BSE) data via an MCP server: financial statements, a ratio screener, technical indicators, FII/DII flows, index option chains (end-of-day snapshots), shareholding and filings.
   - `Freemium` `API` `India`
 
+- [China Exchange Circulars](https://chinaexchangecirculars.com/)
+  - Daily trading parameters (margins, price limits, fees, position limits) for futures listed on China's six futures exchanges, plus English summaries of exchange notices; web pages and RSS are free, alerts and data exports are paid.
+  - `Freemium` `China`
+
 ## Quant Research Frameworks
 
 - [AKQuant](https://github.com/akfamily/akquant)

@@ -209,6 +209,10 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 印度股票市场（NSE、BSE）数据，可通过 MCP 服务器获取：财务报表、财务指标筛选、技术指标、FII/DII 资金流向、指数期权链（日终快照）、股东持股和公告。
   - `免费增值` `API` `印度`
 
+- [China Exchange Circulars](https://chinaexchangecirculars.com/)
+  - 国内六家期货交易所上市品种的每日交易参数（保证金、涨跌停板、手续费、持仓限额）和交易所公告的英文摘要；网页和 RSS 免费，变化提醒和数据导出需付费。
+  - `免费增值` `中国`
+
 ## 量化投研框架
 
 - [AKQuant](https://github.com/akfamily/akquant)

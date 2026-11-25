@@ -63,6 +63,10 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 股票市场与财务数据 API。
   - `免费增值` `全球`
 
+- [ZVT](https://github.com/zvtvz/zvt)
+  - 模块化的量化框架，可从东方财富等来源抓取 A 股、美股等市场数据并增量入库，支持因子计算、选股和回测。
+  - `免费` `中国`
+
 ## 金融数据 SDK
 
 - [WindPy](https://www.wind.com.cn/)
@@ -80,6 +84,10 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
 - [TQSDK](https://github.com/shinnytech/tqsdk-python)
   - 信易科技（shinnytech）的 SDK，可免费获取期货 Tick 和分钟数据。
   - `免费增值` `中国`
+
+- [Futu OpenAPI](https://github.com/FutunnOpen/py-futu-api)
+  - 富途 OpenAPI 的官方 Python SDK，通过本地网关 OpenD 获取港股、美股等市场的行情并进行交易；需要富途账户，部分行情需另购权限。
+  - `免费增值` `香港` `美国`
 
 ## 公开数据源
 
@@ -101,6 +109,30 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
 
 - [深圳证券交易所](https://www.szse.cn/)
   - 深市上市公司公告、行情和市场统计数据。
+  - `免费` `中国`
+
+- [上海期货交易所](https://www.shfe.com.cn/)
+  - 有色金属、贵金属、黑色金属、能源化工等期货和期权品种的行情、交易参数、仓单和市场统计数据。
+  - `免费` `中国`
+
+- [上海国际能源交易中心](https://www.ine.cn/)
+  - 上期所旗下面向境外交易者开放的交易场所，提供原油、低硫燃料油、20 号胶、国际铜等品种的行情和统计数据。
+  - `免费` `中国`
+
+- [大连商品交易所](http://www.dce.com.cn/)
+  - 农产品、铁矿石、焦煤、焦炭、化工等期货和期权品种的行情、交易参数、仓单和市场统计数据。
+  - `免费` `中国`
+
+- [郑州商品交易所](https://www.czce.com.cn/)
+  - 棉花、白糖、PTA、甲醇、玻璃、纯碱等期货和期权品种的行情、交易参数、仓单和市场统计数据。
+  - `免费` `中国`
+
+- [中国金融期货交易所](http://www.cffex.com.cn/)
+  - 股指期货、国债期货和股指期权的行情、交易参数、持仓排名和市场统计数据。
+  - `免费` `中国`
+
+- [广州期货交易所](http://www.gfex.com.cn/)
+  - 工业硅、碳酸锂、多晶硅等期货和期权品种的行情、交易参数和市场统计数据。
   - `免费` `中国`
 
 - [巨潮资讯](https://www.cninfo.com.cn/)
@@ -235,12 +267,44 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 老牌事件驱动回测框架，社区资料丰富；2024 年后已基本停止更新。
   - `免费` `全球`
 
+- [Lean](https://github.com/QuantConnect/Lean)
+  - QuantConnect 开源的算法交易引擎，C# 内核，可用 Python 和 C# 编写策略，支持多种资产的回测与实盘。
+  - `免费` `全球`
+
+- [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded)
+  - Quantopian 事件驱动回测框架 Zipline 的社区维护版本；原版已停止维护。
+  - `免费` `全球`
+
+- [RQAlpha](https://github.com/ricequant/rqalpha)
+  - 米筐（RiceQuant）开源的 Python 回测与交易框架，支持股票和期货，可通过 Mod 扩展；仅限非商业使用。
+  - `免费` `中国`
+
+- [QUANTAXIS](https://github.com/yutiansut/QUANTAXIS)
+  - 可本地部署的量化解决方案，覆盖股票、期货、期权的数据、回测、模拟和实盘交易。
+  - `免费` `中国`
+
+- [Hikyuu](https://github.com/fasiondog/hikyuu)
+  - C++ 内核、Python 接口的开源量化研究框架，侧重交易策略的分析与高速回测。
+  - `免费` `中国`
+
+- [easytrader](https://github.com/shidenggui/easytrader)
+  - A 股程序化交易库，支持同花顺客户端、miniQMT 和雪球组合，可跟踪聚宽、米筐的模拟交易。
+  - `免费` `中国`
+
 - [QuantStats](https://github.com/ranaroussi/quantstats)
   - 投资组合绩效与风险分析库，可一键生成 HTML 分析报告。
   - `免费` `全球`
 
 - [RustQuant](https://github.com/avhz/RustQuant)
   - Rust 量化金融库，涵盖期权定价、随机过程、利率曲线等。
+  - `免费` `全球`
+
+- [QuantLib](https://github.com/lballabio/QuantLib)
+  - C++ 量化金融库，用于衍生品定价、利率建模和风险管理，提供 Python 等语言的接口。
+  - `免费` `全球`
+
+- [TA-Lib](https://github.com/TA-Lib/ta-lib-python)
+  - 技术分析指标库 TA-Lib 的 Python 封装，提供 150 多种技术指标和 K 线形态识别。
   - `免费` `全球`
 
 ## 学习资源
@@ -251,6 +315,14 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
 
 - [Quantocracy](https://quantocracy.com/)
   - 量化交易博客文章聚合站，每日汇总新发布的研究与策略文章。
+  - `免费` `全球`
+
+- [arXiv 量化金融（q-fin）](https://arxiv.org/archive/q-fin)
+  - arXiv 的量化金融预印本分类，涵盖资产定价、组合管理、风险管理、市场微观结构等方向的论文。
+  - `免费` `全球`
+
+- [Awesome Quant](https://github.com/wilsonfreitas/awesome-quant)
+  - 英文量化金融资源清单，按编程语言整理了各类库、软件包和学习资料。
   - `免费` `全球`
 
 ## 已停止维护

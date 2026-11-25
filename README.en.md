@@ -63,6 +63,10 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - Stock market and financial data API.
   - `Freemium` `Global`
 
+- [ZVT](https://github.com/zvtvz/zvt)
+  - Modular quant framework that records data for A-shares, US stocks and other markets from sources such as Eastmoney with incremental updates, and supports factor computation, stock selection and backtesting.
+  - `Free` `China`
+
 ## Financial Data SDK
 
 - [WindPy](https://www.wind.com.cn/)
@@ -80,6 +84,10 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 - [TQSDK](https://github.com/shinnytech/tqsdk-python)
   - The SDK from Shinnytech, offering free futures tick and minute data.
   - `Freemium` `China`
+
+- [Futu OpenAPI](https://github.com/FutunnOpen/py-futu-api)
+  - The official Python SDK for Futu OpenAPI, providing quotes and trading for Hong Kong, US and other markets through the local OpenD gateway; a Futu account is required and some quotes need a paid subscription.
+  - `Freemium` `Hong Kong` `US`
 
 ## Public Data Sources
 
@@ -101,6 +109,30 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 
 - [Shenzhen Stock Exchange](https://www.szse.cn/)
   - Announcements, quotes and market statistics for companies listed in Shenzhen.
+  - `Free` `China`
+
+- [Shanghai Futures Exchange](https://www.shfe.com.cn/)
+  - Quotes, trading parameters, warehouse receipts and market statistics for futures and options on base metals, precious metals, ferrous metals, energy and chemicals.
+  - `Free` `China`
+
+- [Shanghai International Energy Exchange](https://www.ine.cn/)
+  - A subsidiary of the Shanghai Futures Exchange open to overseas traders, with quotes and statistics for crude oil, low-sulfur fuel oil, TSR 20 rubber, bonded copper and other products.
+  - `Free` `China`
+
+- [Dalian Commodity Exchange](http://www.dce.com.cn/)
+  - Quotes, trading parameters, warehouse receipts and market statistics for futures and options on agricultural products, iron ore, coking coal, coke and chemicals.
+  - `Free` `China`
+
+- [Zhengzhou Commodity Exchange](https://www.czce.com.cn/)
+  - Quotes, trading parameters, warehouse receipts and market statistics for futures and options on cotton, sugar, PTA, methanol, glass, soda ash and other products.
+  - `Free` `China`
+
+- [China Financial Futures Exchange](http://www.cffex.com.cn/)
+  - Quotes, trading parameters, position rankings and market statistics for stock index futures, treasury bond futures and stock index options.
+  - `Free` `China`
+
+- [Guangzhou Futures Exchange](http://www.gfex.com.cn/)
+  - Quotes, trading parameters and market statistics for futures and options on industrial silicon, lithium carbonate, polysilicon and other products.
   - `Free` `China`
 
 - [CNINFO](https://www.cninfo.com.cn/)
@@ -235,12 +267,44 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - Long-standing event-driven backtesting framework with plenty of community material; largely unmaintained since 2024.
   - `Free` `Global`
 
+- [Lean](https://github.com/QuantConnect/Lean)
+  - QuantConnect's open-source algorithmic trading engine with a C# core; strategies can be written in Python or C#, with backtesting and live trading across multiple asset classes.
+  - `Free` `Global`
+
+- [Zipline Reloaded](https://github.com/stefan-jansen/zipline-reloaded)
+  - Community-maintained version of Zipline, Quantopian's event-driven backtesting framework; the original is no longer maintained.
+  - `Free` `Global`
+
+- [RQAlpha](https://github.com/ricequant/rqalpha)
+  - RiceQuant's open-source Python backtesting and trading framework for stocks and futures, extensible through Mods; non-commercial use only.
+  - `Free` `China`
+
+- [QUANTAXIS](https://github.com/yutiansut/QUANTAXIS)
+  - Self-hosted quant solution covering data, backtesting, paper trading and live trading for stocks, futures and options.
+  - `Free` `China`
+
+- [Hikyuu](https://github.com/fasiondog/hikyuu)
+  - Open-source quant research framework with a C++ core and a Python API, focused on strategy analysis and fast backtesting.
+  - `Free` `China`
+
+- [easytrader](https://github.com/shidenggui/easytrader)
+  - Programmatic trading library for A-shares, supporting the Tonghuashun client, miniQMT and Xueqiu portfolios, and able to follow JoinQuant and RiceQuant paper trading.
+  - `Free` `China`
+
 - [QuantStats](https://github.com/ranaroussi/quantstats)
   - Portfolio performance and risk analytics library that generates HTML tear sheets.
   - `Free` `Global`
 
 - [RustQuant](https://github.com/avhz/RustQuant)
   - Rust library for quantitative finance, covering option pricing, stochastic processes, yield curves and more.
+  - `Free` `Global`
+
+- [QuantLib](https://github.com/lballabio/QuantLib)
+  - C++ library for quantitative finance, used for derivatives pricing, interest rate modeling and risk management, with bindings for Python and other languages.
+  - `Free` `Global`
+
+- [TA-Lib](https://github.com/TA-Lib/ta-lib-python)
+  - Python wrapper for the TA-Lib technical analysis library, with 150+ indicators and candlestick pattern recognition.
   - `Free` `Global`
 
 ## Learning Resources
@@ -251,6 +315,14 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 
 - [Quantocracy](https://quantocracy.com/)
   - Aggregator of quantitative trading blog posts, updated daily with new research and strategy articles.
+  - `Free` `Global`
+
+- [arXiv Quantitative Finance (q-fin)](https://arxiv.org/archive/q-fin)
+  - The quantitative finance preprint category on arXiv, covering asset pricing, portfolio management, risk management, market microstructure and more.
+  - `Free` `Global`
+
+- [Awesome Quant](https://github.com/wilsonfreitas/awesome-quant)
+  - A curated English list of quantitative finance resources, with libraries, packages and learning material organized by programming language.
   - `Free` `Global`
 
 ## Discontinued

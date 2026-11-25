@@ -2,7 +2,7 @@
 
 简体中文 | [English](README.en.md)
 
-AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具、数据源、量化投研框架和学习资源合集。
+AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具、数据源、量化投研框架、量化平台和学习资源合集。
 
 > 欢迎推荐你常用的数据源和量化工具！请在本仓库[提交 issue](https://github.com/akfamily/akhub/issues/new/choose)，中文或英文均可，详见[参与贡献](#参与贡献)。
 
@@ -14,8 +14,8 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
 - [公开数据源](#公开数据源)
 - [商业数据源](#商业数据源)
 - [量化投研框架](#量化投研框架)
+- [量化平台](#量化平台)
 - [学习资源](#学习资源)
-- [已停止维护](#已停止维护)
 - [参与贡献](#参与贡献)
 - [许可证](#许可证)
 
@@ -233,10 +233,6 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 提供股票和加密货币的低、中、高频数据，以及财务数据。
   - `付费` `中国` `加密货币`
 
-- [米筐量化平台](https://www.ricequant.com/welcome/datahub)
-  - 提供股票、期货、期权等产品的行情和因子数据。
-  - `付费` `中国`
-
 - [Tapetide](https://tapetide.com/mcp)
   - 印度股票市场（NSE、BSE）数据，可通过 MCP 服务器获取：财务报表、财务指标筛选、技术指标、FII/DII 资金流向、指数期权链（日终快照）、股东持股和公告。
   - `免费增值` `API` `印度`
@@ -307,6 +303,36 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 技术分析指标库 TA-Lib 的 Python 封装，提供 150 多种技术指标和 K 线形态识别。
   - `免费` `全球`
 
+## 量化平台
+
+- [聚宽（JoinQuant）](https://www.joinquant.com/)
+  - 基于 Python 的在线量化研究平台，提供研究环境、策略回测和模拟交易。
+  - `免费增值` `中国`
+
+- [米筐量化平台](https://www.ricequant.com/welcome/quant)
+  - 米筐（RiceQuant）的在线量化研究与回测平台，基于 Python，覆盖股票、期货等品种。
+  - `付费` `中国`
+
+- [优矿（Uqer）](https://uqer.datayes.com/)
+  - 通联数据旗下的在线量化平台，基于 Python，提供研究环境、策略回测和金融数据。
+  - `免费增值` `中国`
+
+- [掘金量化](https://www.myquant.cn/)
+  - 以本地终端为主的量化平台，支持 Python、C++、C# 等语言，提供回测、仿真和实盘交易。
+  - `免费增值` `中国`
+
+- [BigQuant](https://bigquant.com/)
+  - 以人工智能为核心的量化投资平台，提供可视化建模、机器学习策略开发和回测。
+  - `免费增值` `中国`
+
+- [果仁网](https://guorn.com/)
+  - 无需编程的量化选股与回测平台，覆盖 A 股、港股和 ETF。
+  - `免费增值` `中国`
+
+- [FMZ 发明者量化](https://www.fmz.com/)
+  - 支持 JavaScript、Python 等语言的在线量化交易平台（原名 BotVS），可对接加密货币交易所和商品期货。
+  - `免费增值` `中国` `加密货币`
+
 ## 学习资源
 
 - [QuantEcon](https://python.quantecon.org/)
@@ -324,16 +350,6 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
 - [Awesome Quant](https://github.com/wilsonfreitas/awesome-quant)
   - 英文量化金融资源清单，按编程语言整理了各类库、软件包和学习资料。
   - `免费` `全球`
-
-## 已停止维护
-
-以下条目已无法正常使用或已被其他产品取代，仅作记录。
-
-- [Investpy](https://github.com/alvarobartt/investpy)
-  - 用 Python 从 Investing.com 获取金融数据。因网站接口变化已无法正常使用，作者推荐改用 [investiny](https://github.com/alvarobartt/investiny)。
-
-- [BankScope](https://www.bvdinfo.com)
-  - 欧洲金融信息服务商 BvD 与银行业权威评级机构惠誉共同开发的银行业信息库。BankScope 已于 2016 年底停止服务，由 BvD 的 BankFocus（原名 Orbis Bank Focus）取代；BvD 已于 2017 年被穆迪（Moody's）收购。
 
 ## 参与贡献
 

@@ -10,7 +10,7 @@
 
 ## 收录标准
 
-- **与金融或经济相关**：提供行情、财务、宏观经济、另类数据等，或者是获取这类数据的工具，以及量化回测、交易与绩效分析框架和相关学习资源。
+- **与金融或经济相关**：提供行情、财务、宏观经济、另类数据等，或者是获取这类数据的工具，以及量化回测、交易与绩效分析框架、量化平台和相关学习资源。
 - **成熟、使用广泛**：开源项目应有一定的使用量并持续维护；产品或服务应已正式上线一段时间，并有稳定的用户群。
 - **可以稳定访问**：链接能够正常打开，不需要特殊的网络环境。
 - **信息真实**：简介如实描述数据内容和收费方式，不夸大宣传。
@@ -36,7 +36,7 @@
    ```
 
 3. 标签从 README 的“标签说明”中选择：费用标签（`免费`、`免费增值`、`付费`）选一个，市场标签（`中国`、`香港`、`美国`、`印度`、`全球`、`加密货币`）按实际覆盖范围选择；公开数据源和商业数据源如果提供程序化访问接口，加上 `API`。英文版使用对应的英文标签。
-4. 条目已停止维护或被其他产品取代时，移到“已停止维护”一节并说明原因。
+4. 条目已停止维护、无法使用或被其他产品取代时，直接从列表中删除，并在 PR 中说明原因。
 
 ---
 
@@ -50,7 +50,7 @@ Please use the [issue templates](https://github.com/akfamily/akhub/issues/new/ch
 
 ### Inclusion criteria
 
-- **Related to finance or economics**: market, financial statement, macroeconomic or alternative data, a tool for getting such data, or a framework or learning resource for quantitative backtesting, trading and performance analysis.
+- **Related to finance or economics**: market, financial statement, macroeconomic or alternative data, a tool for getting such data, or a framework, platform or learning resource for quantitative backtesting, trading and performance analysis.
 - **Well-established and widely used**: open-source projects should have real adoption and active maintenance; products and services should have been publicly available for a while with a stable user base.
 - **Reliably accessible**: links should open normally without special network setups.
 - **Accurate**: the description should honestly reflect the data and pricing, without marketing exaggeration.
@@ -76,4 +76,4 @@ If you open a PR directly:
    ```
 
 3. Pick tags from the "Tags" table in the README: one pricing tag (`Free`, `Freemium`, `Paid`) and the market tags that match the coverage (`China`, `Hong Kong`, `US`, `India`, `Global`, `Crypto`). Add `API` to public and commercial data sources that offer programmatic access. Use the corresponding Chinese tags in `README.md`.
-4. When an entry is no longer maintained or has been replaced, move it to the "Discontinued" section and explain why.
+4. When an entry is no longer maintained, no longer works or has been replaced, remove it from the list and explain why in the PR.

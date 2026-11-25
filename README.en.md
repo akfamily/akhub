@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | English
 
-AKHub is a curated list of financial and economic data tools, data sources, quant research frameworks and learning resources, maintained by [AKFamily](https://akfamily.xyz).
+AKHub is a curated list of financial and economic data tools, data sources, quant research frameworks, quant platforms and learning resources, maintained by [AKFamily](https://akfamily.xyz).
 
 > Contributions are welcome! To suggest a data source or quant tool, please [open an issue](https://github.com/akfamily/akhub/issues/new/choose) in English or Chinese. See [Contributing](#contributing) for details.
 
@@ -14,8 +14,8 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 - [Public Data Sources](#public-data-sources)
 - [Commercial Data Sources](#commercial-data-sources)
 - [Quant Research Frameworks](#quant-research-frameworks)
+- [Quant Platforms](#quant-platforms)
 - [Learning Resources](#learning-resources)
-- [Discontinued](#discontinued)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -233,10 +233,6 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - Low-, medium- and high-frequency data for stocks and cryptocurrencies, plus financial statement data.
   - `Paid` `China` `Crypto`
 
-- [RiceQuant DataHub](https://www.ricequant.com/welcome/datahub)
-  - Market and factor data for stocks, futures, options and more.
-  - `Paid` `China`
-
 - [Tapetide](https://tapetide.com/mcp)
   - Indian stock market (NSE, BSE) data via an MCP server: financial statements, a ratio screener, technical indicators, FII/DII flows, index option chains (end-of-day snapshots), shareholding and filings.
   - `Freemium` `API` `India`
@@ -307,6 +303,36 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - Python wrapper for the TA-Lib technical analysis library, with 150+ indicators and candlestick pattern recognition.
   - `Free` `Global`
 
+## Quant Platforms
+
+- [聚宽 (JoinQuant)](https://www.joinquant.com/)
+  - Online Python quant research platform with a research environment, strategy backtesting and paper trading.
+  - `Freemium` `China`
+
+- [RiceQuant](https://www.ricequant.com/welcome/quant)
+  - RiceQuant's online Python platform for quant research and backtesting, covering stocks, futures and more.
+  - `Paid` `China`
+
+- [优矿 (Uqer)](https://uqer.datayes.com/)
+  - Datayes' online Python quant platform, with a research environment, strategy backtesting and financial data.
+  - `Freemium` `China`
+
+- [掘金量化 (MyQuant)](https://www.myquant.cn/)
+  - Quant platform built around a local terminal, supporting Python, C++, C# and other languages, with backtesting, simulation and live trading.
+  - `Freemium` `China`
+
+- [BigQuant](https://bigquant.com/)
+  - AI-centered quant investment platform with visual modeling, machine learning strategy development and backtesting.
+  - `Freemium` `China`
+
+- [果仁网 (Guorn)](https://guorn.com/)
+  - No-code quant stock selection and backtesting platform covering A-shares, Hong Kong stocks and ETFs.
+  - `Freemium` `China`
+
+- [FMZ Quant](https://www.fmz.com/)
+  - Online quant trading platform (formerly BotVS) supporting JavaScript, Python and other languages, with connections to crypto exchanges and commodity futures.
+  - `Freemium` `China` `Crypto`
+
 ## Learning Resources
 
 - [QuantEcon](https://python.quantecon.org/)
@@ -324,16 +350,6 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
 - [Awesome Quant](https://github.com/wilsonfreitas/awesome-quant)
   - A curated English list of quantitative finance resources, with libraries, packages and learning material organized by programming language.
   - `Free` `Global`
-
-## Discontinued
-
-The following entries no longer work or have been replaced by other products. They are kept for reference only.
-
-- [Investpy](https://github.com/alvarobartt/investpy)
-  - Financial data extraction from Investing.com with Python. No longer working due to changes on Investing.com; the author recommends [investiny](https://github.com/alvarobartt/investiny) instead.
-
-- [BankScope](https://www.bvdinfo.com)
-  - A banking database jointly developed by Bureau van Dijk (BvD) and Fitch Ratings. BankScope was discontinued at the end of 2016 and replaced by BvD's BankFocus (formerly Orbis Bank Focus); BvD was acquired by Moody's in 2017.
 
 ## Contributing
 

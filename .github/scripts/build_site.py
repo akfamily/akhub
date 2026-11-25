@@ -47,6 +47,7 @@ PAGES = [
         "clear": "清除筛选",
         "empty": "没有符合条件的条目，换个关键词或减少筛选条件试试。",
         "top": "回到顶部",
+        "theme": "切换浅色或深色模式",
         # Relative links in README.md, rewritten for the site.
         "links": {"README.en.md": "en/", "README.md": "./"},
     },
@@ -69,6 +70,7 @@ PAGES = [
         "clear": "Clear filters",
         "empty": "No entries match. Try another keyword or remove some filters.",
         "top": "Back to top",
+        "theme": "Switch between light and dark mode",
         "links": {"README.md": "../", "README.en.md": "./"},
     },
 ]
@@ -306,7 +308,7 @@ TEMPLATE = """<!doctype html>
   <meta property="og:image:height" content="640">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="{home_url}favicon.ico">
-  <script>document.documentElement.className="js"</script>
+  <script>(function(r){{r.className="js";try{{var t=localStorage.getItem("akhub-theme");if(t==="dark"||t==="light")r.setAttribute("data-theme",t)}}catch(e){{}}}})(document.documentElement)</script>
   <style>{css}</style>
 </head>
 <body id="top">
@@ -320,6 +322,10 @@ TEMPLATE = """<!doctype html>
         <a class="home" href="{home_url}">{home}</a>
         <a href="{repo_url}" target="_blank" rel="noopener">{repo}</a>
         <a class="lang" href="{other_href}" hreflang="{other_hreflang}">{other_lang}</a>
+        <button type="button" class="theme" id="theme" aria-label="{theme}" title="{theme}">
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -349,7 +355,7 @@ CSS = """
 :root{--brand:#433dff;--brand-soft:#eef1ff;--text:#1f2328;--muted:#59636e;--line:#e3e6ea;
 --bg:#fff;--bg-alt:#f6f7fb;--surface:#fff;--raised:#fff;--nav-bg:rgba(255,255,255,.94);
 --on-brand:#fff;--ring:rgba(67,61,255,.14);--card-hover:#c5c9f7;
---card-shadow:rgba(67,61,255,.07);--pre:#f3f4f6;--shadow:rgba(0,0,0,.08);color-scheme:light;
+--card-shadow:rgba(67,61,255,.07);--pre:#f3f4f6;--shadow:rgba(0,0,0,.08);--sun:none;--moon:block;color-scheme:light;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
 "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;color:var(--text);line-height:1.75}
 *{box-sizing:border-box}html{scroll-padding-top:76px}body{margin:0;background:var(--bg)}
@@ -360,8 +366,12 @@ a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
 backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;gap:20px;min-height:60px}
 .brand{font-size:22px;font-weight:700;color:var(--text)}.brand:hover{text-decoration:none}
-.nav nav{display:flex;gap:22px;margin-left:auto;white-space:nowrap}
+.nav nav{display:flex;align-items:center;gap:22px;margin-left:auto;white-space:nowrap}
 .nav nav a{color:var(--text);font-size:15px}
+.theme{display:none;align-items:center;justify-content:center;width:34px;height:34px;padding:0;
+color:var(--text);background:none;border:1px solid var(--line);border-radius:50%;cursor:pointer}
+.js .theme{display:inline-flex}.theme:hover{color:var(--brand);border-color:var(--brand)}
+.theme .sun{display:var(--sun)}.theme .moon{display:var(--moon)}
 .search{display:none;flex:1;max-width:440px;margin:0 auto}.js .search{display:block}
 .search input{width:100%;height:38px;padding:0 16px;font:inherit;font-size:15px;color:var(--text);
 background:var(--bg-alt);border:1px solid var(--line);border-radius:999px;outline:none}
@@ -408,7 +418,7 @@ cursor:pointer}#clear:hover{text-decoration:underline}
 .tag{font-size:12.5px;padding:0 10px;background:var(--brand-soft);color:var(--brand)}
 .js .tag:hover{border-color:var(--brand)}
 .chip[aria-pressed="true"],.tag.on{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
-.chip:focus-visible,.tag:focus-visible,.totop:focus-visible{outline:2px solid var(--brand);
+.chip:focus-visible,.tag:focus-visible,.totop:focus-visible,.theme:focus-visible{outline:2px solid var(--brand);
 outline-offset:2px}
 .empty{margin:28px 0;padding:28px 18px;text-align:center;color:var(--muted);
 border:1px dashed var(--line);border-radius:12px}
@@ -448,11 +458,21 @@ border:1px solid var(--line);border-radius:50%;box-shadow:0 2px 10px var(--shado
 .hero h1{font-size:28px}.nav nav a{font-size:14px}.nav .home{display:none}
 .content h2{font-size:21px;margin-top:36px}.filters{padding:12px 14px}
 .totop{right:16px;bottom:16px}}
-@media (prefers-color-scheme:dark){:root{--brand:#a09dff;--brand-soft:#262a52;--text:#e6e9ef;
---muted:#9aa4b2;--line:#2b313c;--bg:#0e1116;--bg-alt:#161a22;--surface:#161a22;--raised:#222834;
---nav-bg:rgba(14,17,22,.92);--on-brand:#11131a;--ring:rgba(160,157,255,.28);--card-hover:#4b5091;
---card-shadow:rgba(0,0,0,.45);--pre:#161a22;--shadow:rgba(0,0,0,.5);color-scheme:dark}}
 """
+
+# Dark palette. It applies when the visitor picks dark with the theme button,
+# or when the system prefers dark and the visitor has not picked light.
+DARK = (
+    "--brand:#a09dff;--brand-soft:#262a52;--text:#e6e9ef;--muted:#9aa4b2;--line:#2b313c;"
+    "--bg:#0e1116;--bg-alt:#161a22;--surface:#161a22;--raised:#222834;"
+    "--nav-bg:rgba(14,17,22,.92);--on-brand:#11131a;--ring:rgba(160,157,255,.28);"
+    "--card-hover:#4b5091;--card-shadow:rgba(0,0,0,.45);--pre:#161a22;--shadow:rgba(0,0,0,.5);"
+    "--sun:block;--moon:none;color-scheme:dark"
+)
+CSS += (
+    ":root[data-theme=dark]{" + DARK + "}\n"
+    "@media (prefers-color-scheme:dark){:root:not([data-theme=light]){" + DARK + "}}\n"
+)
 
 JS = """
 (function(){
@@ -469,6 +489,27 @@ function spy(){
 }
 window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(spy)}},{passive:true});
 spy();
+var root=d.documentElement,tb=d.getElementById('theme');
+var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+var metas=[].slice.call(d.querySelectorAll('meta[name="theme-color"]'));
+var tones=metas.map(function(m){return m.getAttribute('content')});
+function sysTheme(){return mq&&mq.matches?'dark':'light'}
+function paint(){
+  var t=root.getAttribute('data-theme');
+  metas.forEach(function(m,i){m.setAttribute('content',t?tones[t==='dark'?1:0]:tones[i])});
+}
+if(tb){
+  tb.addEventListener('click',function(){
+    var next=(root.getAttribute('data-theme')||sysTheme())==='dark'?'light':'dark';
+    try{
+      if(next===sysTheme())localStorage.removeItem('akhub-theme');
+      else localStorage.setItem('akhub-theme',next);
+    }catch(e){}
+    if(next===sysTheme())root.removeAttribute('data-theme');else root.setAttribute('data-theme',next);
+    paint();
+  });
+  paint();
+}
 if(!q||!bar)return;
 var status=d.getElementById('status'),clear=d.getElementById('clear'),empty=d.getElementById('empty');
 var chips=[].slice.call(bar.querySelectorAll('.chip')),groups={},active={};
@@ -589,6 +630,7 @@ def main():
                 search=esc(page["search"]),
                 sections=esc(page["sections"]),
                 top=esc(page["top"]),
+                theme=esc(page["theme"]),
                 nav=nav,
                 body=body,
                 updated=page["updated"],

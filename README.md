@@ -55,6 +55,10 @@ AKHub 是 [AKFamily](https://akfamily.xyz) 维护的金融与经济数据工具�
   - 统一接入上百家加密货币交易所行情和交易接口的开源库，支持 Python、JavaScript 等语言。
   - `免费` `加密货币`
 
+- [Siebly](https://siebly.io/sdk)
+  - 开源（MIT）JavaScript / TypeScript 加密货币交易所 SDK，通过 REST API 和 WebSocket 获取 Binance、Bybit、OKX、Gate、Bitget、KuCoin、Coinbase、Kraken 和 Hyperliquid 的行情、K 线、订单簿和账户数据；[文档](https://sieblyio.github.io/docs/)。
+  - `免费` `加密货币`
+
 - [Nasdaq Data Link](https://data.nasdaq.com/)
   - 纳斯达克旗下的金融与经济数据平台，前身为 Quandl。
   - `免费增值` `全球`

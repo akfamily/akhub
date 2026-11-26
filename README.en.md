@@ -55,6 +55,10 @@ AKHub is a curated list of financial and economic data tools, data sources, quan
   - A unified library for market data and trading APIs of 100+ cryptocurrency exchanges, available in Python, JavaScript and more.
   - `Free` `Crypto`
 
+- [Siebly](https://siebly.io/sdk)
+  - Open-source (MIT) JavaScript and TypeScript SDKs for crypto exchange REST APIs and WebSockets, covering market data, candles, order books and account data on Binance, Bybit, OKX, Gate, Bitget, KuCoin, Coinbase, Kraken and Hyperliquid; [docs](https://sieblyio.github.io/docs/).
+  - `Free` `Crypto`
+
 - [Nasdaq Data Link](https://data.nasdaq.com/)
   - Nasdaq's financial and economic data platform, formerly known as Quandl.
   - `Freemium` `Global`
